@@ -1,0 +1,485 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section, time {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+textarea:focus, input:focus {
+  outline: 0;
+}
+
+input {
+  border-width: 0;
+}
+
+em {
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1; 
+}
+
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+}
+sup {
+  font-size: 58.3%;
+  vertical-align: text-top;
+}
+sub {
+  font-size: 58.3%;
+  vertical-align: text-bottom;
+}
+.no-space-between-inline-blocks {
+  letter-spacing: -0.31em; 
+  word-spacing: -0.43em; 
+}
+.no-space-between-inline-blocks > * {
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+.displace {
+  left: -5000px;
+  position: absolute;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html {
+  font-size: 16px;
+}
+body {
+  min-width: 1652px;
+  color: #ffffff;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+body {
+  float: none;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  width: 100%; 
+}
+.many-lists {
+  position: relative;
+  width: 100%; 
+  background: url(images/background.png) no-repeat center 0;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.l-constrained {
+  margin: 0 auto;
+  position: relative;
+  width: 1652px;
+}
+.left-menu {
+  float: left;
+  margin: 0 50px 0 0;
+  min-height: 1352px;
+  padding: 26px 5px;
+  position: relative;
+  width: 412px;
+  background: url(images/my-lists-background.png) no-repeat;
+}
+.list-title {
+  margin: 0 0 0 40px;
+  font-size: 24px;
+  font-weight: 800;
+}
+.list-creator {
+  height: 55px;
+  left: 4.5px;
+  margin: 27px auto 0;
+  position: relative;
+  width: 359px;
+}
+.list-input-background-holder {
+  left: 50%;
+  min-height: 55px;
+  padding: 17px 14px 24px;
+  position: absolute;
+  top: 0;
+  width: 276px;
+  background: url(images/create-list_background.png) no-repeat;
+  margin-left: -179.5px;
+}
+.text-input {
+  color: #b8b8b8;
+  font-size: 13px;
+  font-weight: 800;
+}
+.create-list-button {
+  left: 50%;
+  margin: 0 0 0 60.5px;
+  min-height: 55px;
+  padding: 0 10px;
+  position: absolute;
+  top: 0;
+  width: 119px;
+  background: url(images/create-list_background.png) no-repeat;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 55px;
+  text-align: center;
+}
+.row {
+  left: 19.5px;
+  margin: 54px auto 0;
+  position: relative;
+  width: 363px;
+}
+.lists {
+  float: left;
+  margin: 0 25px 0 0;
+  position: relative;
+  width: 330px;
+}
+.list-name-group {
+  float: left;
+  position: relative;
+  width: 229px;
+}
+.list-name {
+  font-weight: 800;
+}
+.list-name-2 {
+  margin: 36px 0 0;
+  font-weight: 800;
+}
+.list-name-3 {
+  margin: 35px 0 0;
+  font-weight: 800;
+}
+.list-name-4 {
+  margin: 35px 0 0;
+  font-weight: 800;
+}
+.list-name-5 {
+  margin: 35px 0 0;
+  font-weight: 800;
+}
+.list-name-6 {
+  margin: 35px 0 0;
+  font-weight: 800;
+}
+.list-name-7 {
+  margin: 35px 0 0;
+  font-weight: 800;
+}
+.list-name-8 {
+  margin: 35px 0 0;
+  font-weight: 800;
+}
+.list-name-9 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-10 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-11 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-12 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-13 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-14 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-15 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-16 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-17 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-name-18 {
+  margin: 35px 0 0;
+  font-weight: 800;
+  text-align: right;
+}
+.list-delete-group {
+  float: right;
+  margin: 10px 0 0;
+  position: relative;
+  width: 12px;
+}
+.list-delete {
+  display: block;
+}
+.list-delete-2 {
+  display: block;
+  margin: 46px 0 0;
+}
+.list-delete-3 {
+  display: block;
+  margin: 46px 0 0;
+}
+.list-delete-4 {
+  display: block;
+  margin: 46px 0 0;
+}
+.list-delete-5 {
+  display: block;
+  margin: 46px 0 0;
+}
+.list-delete-6 {
+  display: block;
+  margin: 46px 0 0;
+}
+.list-delete-7 {
+  display: block;
+  margin: 46px 0 0;
+}
+.list-delete-8 {
+  display: block;
+  margin: 46px 0 0;
+}
+.list-delete-9 {
+  display: block;
+  margin: 46px 0 0;
+}
+.list-delete-10 {
+  display: block;
+  margin: 45px 0 0;
+}
+.list-delete-11 {
+  display: block;
+  margin: 45px 0 0;
+}
+.list-delete-12 {
+  display: block;
+  margin: 45px 0 0;
+}
+.list-delete-13 {
+  display: block;
+  margin: 45px 0 0;
+}
+.list-delete-14 {
+  display: block;
+  margin: 45px 0 0;
+}
+.list-delete-15 {
+  display: block;
+  margin: 45px 0 0;
+}
+.list-delete-16 {
+  display: block;
+  margin: 45px 0 0;
+}
+.list-delete-17 {
+  display: block;
+  margin: 45px 0 0;
+}
+.list-delete-18 {
+  display: block;
+  margin: 45px 0 0;
+}
+.scroll {
+  float: left;
+  margin: 58px 0 0;
+}
+.main-menu {
+  float: left;
+  margin: 89px 0 0;
+  min-height: 1174px;
+  padding: 40px 0 0;
+  position: relative;
+  width: 1000px;
+  background: url(images/main-menu-background.png) no-repeat;
+}
+.complete-task {
+  margin: 0 auto;
+  min-height: 60px;
+  padding: 18px;
+  position: relative;
+  width: 950px;
+  background: url(images/complete-task-background.png) no-repeat;
+}
+.task-complete {
+  float: left;
+  padding: 7px 0;
+  position: relative;
+  width: 24px;
+  background: url(images/task-status.png) no-repeat;
+}
+.vector {
+  display: block;
+  margin: 0 auto;
+}
+.wrapper-2 {
+  float: left;
+  height: 21px;
+  margin: 3px 0 0 25px;
+  position: relative;
+  width: 751px;
+}
+.task-text {
+  left: 50%;
+  position: absolute;
+  top: 0;
+  font-weight: 800;
+  line-height: 21px;
+  margin-left: -375.5px;
+}
+.complete-line {
+  left: 50%;
+  position: absolute;
+  top: 10px;
+  margin-left: -374.5px;
+}
+.complete-task-delete {
+  float: right;
+  margin: 4px 7px 0 0;
+}
+.task {
+  margin: 30px auto 0;
+  min-height: 60px;
+  padding: 18px 18px 17px;
+  position: relative;
+  width: 950px;
+  background: url(images/complete-task-background.png) no-repeat;
+}
+.task-uncomplete {
+  float: left;
+  margin: 0 25px 0 0;
+}
+.task-text-2 {
+  margin: 3px 0 0;
+  font-weight: 800;
+}
+.input {
+  margin: 904px auto 0;
+  padding: 10px 16px;
+  position: relative;
+  width: 997px;
+  background: url(images/input-background2.png) no-repeat;
+}
+.input-background-holder {
+  margin: 0 auto;
+  min-height: 60px;
+  padding: 20px 27px 18px;
+  position: relative;
+  right: 8px;
+  width: 949px;
+  background: url(images/input-background.png) no-repeat;
+}
+.output {
+  float: right;
+  margin: 0 3px 0 0;
+}
+.input-example {
+  color: #8d8b8b;
+  font-weight: 800;
+}

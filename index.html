@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <title>speedrun</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="speedrun">
+    <meta name="keywords" content="speedrun">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      #shoppingList {
+        list-style-type: none;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        margin-top: 20px;
+      }
+  
+      #shoppingList li {
+        padding: 8px 0;
+        border-bottom: 1px solid #ccc;
+      }
+  
+      #shoppingListForm {
+        margin-top: 20px;
+      }
+  
+      #itemInput {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+  
+      #addItemButton {
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+  
+      #addItemButton:hover {
+        background-color: #45a049;
+      }
+    </style> 
+  </head>
+  <body>
+    <div class="frame-1">
+      <div class="header">
+        <div class="l-constrained-3 group">
+          <div class="logo group">
+            <img class="logo-img" src="images/logo-img.png" alt="" width="20" height="20">
+            <p class="logo-2">Simple Shopping</p>
+          </div>
+          <div class="navigation group">
+            <p class="glavnaya"><a class="btn" href="index.html">Главная</a></p>
+            <p class="text"><a class="btn" href="new.html">Список покупок</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="l-constrained-2 group">
+          <div class="text-block">
+            <p class="main-title">Список покупок &nbsp;- быстро и просто</p>
+            <p class="main-paragraph">Благодаря нашему сайту, покупка продуктов станет простой задачей</p>
+          </div>
+          <img class="main-image" src="images/main-image.png" alt="" width="772" height="641">
+        </div>
+      </div>
+
+      <div class="button">
+        <div class="button-2 group" id="createListButton">
+          <img class="ellipse-1" src="images/ellipse_1.png" alt="" width="30" height="30">
+          <p class="text-2">Создать &nbsp;свой &nbsp;список покупок</p>
+        </div>
+      </div>
+
+      <div class="shopping-list-form" id="shoppingListForm" style="display: none;">
+        <h2>Создать новый список покупок</h2>
+        <input type="text" id="itemInput" placeholder="Введите товар" />
+        <button id="addItemButton">Добавить в список</button>
+        <ul id="shoppingList"></ul>
+      </div>
+
+      <div class="footer">
+        <div class="l-constrained group">
+          <div class="col">
+            <div class="logo-footer group">
+              <img class="logo-img" src="images/234_1.png" alt="" width="20" height="20">
+              <p class="logo-3">Simple Shopping</p>
+            </div>
+            <p class="text-3">ФГАОУ ВО «УрФУ имени первого Президента России Б.Н. Ельцина»</p>
+          </div>
+          <div class="support-service">
+            <p class="text-4">Контакт-центр</p>
+            <div class="phone">
+              <p class="text-5"><a href="tel:+78001005044">8-800-100-50-44</a></p>
+              <p class="text-6">Звонок по России бесплатный</p>
+            </div>
+            <div class="email">
+              <a href="mailto:contact@urfu.ru">contact@urfu.ru</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const createListButton = document.getElementById('createListButton');
+
+      createListButton.addEventListener('click', () => {
+        // Переход на страницу new.html
+        window.location.href = 'new.html';
+      });
+    </script>
+  </body>
+</html>

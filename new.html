@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Список задач">
+<meta name="keywords" content="Список, задачи, менеджер">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Task Manager</title>
+<link rel="stylesheet" href="stylenew.css">
+<style>
+/* Дополнительные стили */
+.list-name {
+  margin-bottom: 15px;
+  font-size: 18px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.delete-btn {
+  width: 20px;
+  height: 20px;
+  background-image: url('images/list-delete.png');
+  background-size: cover;
+  display: inline-block;
+  cursor: pointer;
+}
+.task {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Распределение элементов по краям */
+}
+.task-text-2 {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.input-background-holder {
+  cursor: pointer;
+}
+.task-btns {
+  display: flex;
+  margin-left: 10px;
+  margin-left: auto; /* Перемещаем кнопку удаления вправо */
+}
+.task-btn {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="many-lists">
+  <div class="l-constrained group">
+    <!-- Левое меню -->
+    <div class="left-menu">
+      <p class="list-title">Мои списки</p>
+      <div class="list-creator">
+        <div class="create-list-button">
+          Создать
+        </div>
+      </div>
+      <div class="row group">
+        <div class="lists group">
+          <div class="list-name-group">
+            <!-- Списки добавляются сюда -->
+          </div>
+        </div>
+        <img class="scroll" src="images/scroll.png" alt="Скролл" width="8" height="860">
+      </div>
+    </div>
+    <!-- Главное меню -->
+    <div class="main-menu group">
+      <div class="input">
+        <div class="input-background-holder group">
+          <img class="output" src="images/output.png" alt="Добавить задачу" width="11" height="20">
+          <p class="input-example">Введите задачу</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Обработчик для создания нового списка
+  document.querySelector('.create-list-button').addEventListener('click', () => {
+    const listName = prompt("Введите название списка:");
+    if (listName) {
+      const listContainer = document.querySelector('.list-name-group');
+      const newList = document.createElement('div');
+      newList.className = 'list-name';
+      newList.innerHTML = `
+        <span>${listName}</span>
+        <span class="delete-btn" title="Удалить"></span>
+      `;
+      listContainer.appendChild(newList);
+
+      // Удаление списка
+      newList.querySelector('.delete-btn').addEventListener('click', () => {
+        listContainer.removeChild(newList);
+      });
+    }
+  });
+
+  // Обработчик для добавления новой задачи
+  document.querySelector('.input-background-holder').addEventListener('click', () => {
+    const taskName = prompt("Введите задачу:");
+    if (taskName) {
+      const taskContainer = document.querySelector('.main-menu');
+      const newTask = document.createElement('div');
+      newTask.className = 'task group';
+      newTask.innerHTML = `
+        <img class="task-uncomplete" src="images/task-uncomplete.png" alt="Незавершено" width="24" height="24">
+        <p class="task-text-2">${taskName}</p>
+        <div class="task-btns">
+          <img class="task-btn" src="images/complete-task-delete.png" alt="Удалить" title="Удалить">
+        </div>
+      `;
+      taskContainer.insertBefore(newTask, taskContainer.firstChild);
+
+      // Обработчик для выполнения задачи (изменение иконки на выполненную)
+      newTask.querySelector('.task-uncomplete').addEventListener('click', () => {
+        const taskIcon = newTask.querySelector('.task-uncomplete');
+        if (taskIcon.src.includes('task-uncomplete.png')) {
+          taskIcon.src = 'images/task-complete.png'; // Меняем иконку на выполненную
+        } else {
+          taskIcon.src = 'images/task-uncomplete.png'; // Меняем обратно на незавершенную
+        }
+      });
+
+      // Обработчик для удаления задачи
+      newTask.querySelector('.task-btns .task-btn[src="images/complete-task-delete.png"]').addEventListener('click', () => {
+        taskContainer.removeChild(newTask); // Удаляем задачу
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
